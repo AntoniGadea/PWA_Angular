@@ -1,0 +1,10 @@
+mat-card{
+    margin: 40px;
+    padding: 30px;
+}
+
+button{
+    position: absolute;
+    top: 16%;
+    right: 7%;
+}

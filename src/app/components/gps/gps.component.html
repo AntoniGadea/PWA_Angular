@@ -1,0 +1,17 @@
+<div >
+    <h2>Registro de ubicaciones</h2>
+    <div class="container" *ngFor="let ubicacion of ubicaciones"> 
+    <mat-card  *ngIf="ubicacion != null">
+        <mat-card-content *ngIf="ubicacion != null" >Fecha: {{ubicacion.date}}</mat-card-content>
+        <mat-card-content *ngIf="ubicacion != null" >Latitud: {{ubicacion.coords.latitude}}</mat-card-content>
+        <mat-card-content *ngIf="ubicacion != null" >Longitud: {{ubicacion.coords.longitude}}</mat-card-content>
+        <mat-card-content *ngIf="ubicacion != null" >
+                <app-map [latitude]="ubicacion.coords.latitude" [longitude]="ubicacion.coords.longitude"></app-map>
+        </mat-card-content>
+        <button *ngIf="ubicacion != null" (click)="delete(ubicacion)" class="delete" mat-mini-fab color="warn">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </mat-card>
+</div>
+</div>
+<button class="bot" mat-fab (click)="getCurrentLocation()"><mat-icon>gps_fixed</mat-icon></button>

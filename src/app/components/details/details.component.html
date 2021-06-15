@@ -1,0 +1,12 @@
+<div>
+<mat-card>
+    <mat-card-title>Datos de usuario</mat-card-title>
+    <mat-card-content>Nombre: {{usuario.nombre}}</mat-card-content>
+    <mat-card-content>Apellidos: {{usuario.apellidos}}</mat-card-content>
+    <mat-card-content>Email: {{usuario.email}}</mat-card-content>
+    <mat-card-content>Emrpesa: {{usuario.empresa}}<span *ngIf="usuario.empresa == ''"><i>Ninguna</i></span></mat-card-content>
+    <mat-card-content><button (click)="show()" mat-raised-button color="primary">Registro de Trabajo</button></mat-card-content>
+</mat-card>
+<button (click)="editar()" class="bot" mat-fab color="warn"><mat-icon>edit</mat-icon></button>
+<app-trabajo-details *ngIf="display"></app-trabajo-details>
+</div>

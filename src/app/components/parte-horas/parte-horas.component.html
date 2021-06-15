@@ -1,0 +1,17 @@
+<div>
+<mat-card>
+    <label for="input">File:</label>
+    <input type="file" name="input"  (change)="catchFiles($event.target.files)">
+    <br/>
+    <textarea name="output" [value]="output" ></textarea>
+    <button (click)="save()" mat-fab color="primary"><mat-icon >save</mat-icon></button>
+</mat-card>
+</div>
+<div *ngFor="let import of imports; index as i">
+    <app-import-detail *ngIf="import != null && import.horas >0" [n]="i+1" [horas]="import.horas"  [vacaciones]="import.vacaciones"></app-import-detail>
+</div>
+
+
+
+    
+

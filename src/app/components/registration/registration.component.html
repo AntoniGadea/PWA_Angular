@@ -1,0 +1,38 @@
+<div class="example-container">
+    <div class="form-container">
+    <form [formGroup]="form" (submit)="onSubmit()">
+      <mat-label> Email: </mat-label>
+        <mat-form-field  class="form-field ripple" appearance="outline">
+          <input matInput formControlName="email" required placeholder="jhon@example.org">
+        </mat-form-field>
+        <mat-error class="error" *ngIf="form.controls.email.touched && form.controls.email.invalid">
+          <span *ngIf="form.controls.email.errors.required">Este campo es obligatorio.</span>
+          <span *ngIf="form.controls.email.errors.pattern">El usuario introducido no es valido.</span>
+        </mat-error>
+        <mat-label> Nombre: </mat-label>
+        <mat-form-field class="form-field" appearance="outline">
+          <input matInput formControlName="first_name" type="text" placeholder="">
+        </mat-form-field>
+        <mat-label> Apellidos: </mat-label>
+        <mat-form-field class="form-field" appearance="outline">
+          <input matInput formControlName="last_name" type="text" placeholder="">
+        </mat-form-field>
+        <mat-label> Contraseña: </mat-label>
+        <mat-form-field class="form-field" appearance="outline">
+          <input matInput formControlName="password1" type="password" placeholder="******">
+        </mat-form-field>
+        <mat-error class="error" *ngIf="form.controls.password1.touched && form.controls.password1.invalid">
+          <span>Este campo es obligatorio</span>
+        </mat-error>
+        <mat-label> Repite la contraseña: </mat-label>
+        <mat-form-field class="form-field" appearance="outline">
+          <input matInput formControlName="password2" type="password" placeholder="******">
+        </mat-form-field>
+        <mat-error class="error" *ngIf="form.controls.password2.touched && form.controls.password2.invalid">
+          <span>Las contraseñas no coinciden</span>
+        </mat-error>
+        <button mat-raised-button color="primary" type="submit">Registrar</button><br/>
+      </form>
+    </div>
+</div>
+

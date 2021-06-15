@@ -1,0 +1,6 @@
+<mat-card>
+    <mat-card-content>Horas Trabajadas: {{registro.horasTrabajadas}}</mat-card-content>
+    <mat-card-content>Dias de vacaciones disponibles: {{registro.vacacionesDisponibles}}</mat-card-content>
+    <mat-card-content>Dias de vacaciones usados: {{registro.vacacionesUsadas}}</mat-card-content>
+</mat-card>
+<button (click)="calcTime()" mat-fab><mat-icon>refresh</mat-icon></button>

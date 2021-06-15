@@ -1,0 +1,28 @@
+mat-card{
+    width: 80%;
+    height: 400px;
+    margin-top: 40px;
+}
+textarea{
+    width: 80%;
+    height: 70%;
+    border: 1px solid rgb(202, 202, 202);
+    margin: 3%;
+    padding: 20px;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+button{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+app-import-detail{
+    width: 80%;
+}

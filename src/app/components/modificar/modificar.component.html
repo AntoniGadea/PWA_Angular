@@ -1,0 +1,32 @@
+<div class="example-container">
+    <div class="form-container">
+    <form [formGroup]="form" (submit)="onSubmit()">
+      <mat-label> Email: </mat-label>
+        <mat-form-field  class="form-field ripple" appearance="outline">
+          <input matInput formControlName="email" readonly required [(ngModel)]="usuario.email">
+        </mat-form-field>
+        <mat-label> Nombre: </mat-label>
+        <mat-form-field class="form-field" appearance="outline">
+          <input matInput formControlName="first_name" type="text"  [(ngModel)]="usuario.nombre">
+        </mat-form-field>
+        <mat-error class="error" *ngIf="form.controls.first_name.touched && form.controls.first_name.invalid">
+            <span *ngIf="form.controls.first_name.errors.required">Este campo no puede estar en blanco</span>
+          </mat-error>
+        <mat-label> Apellidos: </mat-label>
+        <mat-form-field class="form-field" appearance="outline">
+          <input matInput formControlName="last_name" type="text" [(ngModel)]="usuario.apellidos">
+        </mat-form-field>
+        <mat-error class="error" *ngIf="form.controls.last_name.touched && form.controls.last_name.invalid">
+            <span *ngIf="form.controls.last_name.errors.required">Este campo no puede estar en blanco</span>
+          </mat-error>
+          <mat-label> Empresa: </mat-label>
+        <mat-form-field class="form-field" appearance="outline">
+          <input matInput formControlName="empresa" type="text" [(ngModel)]="usuario.empresa">
+        </mat-form-field>
+        <mat-error class="error" *ngIf="form.controls.empresa.touched && form.controls.empresa.invalid">
+            <span *ngIf="form.controls.empresa.errors.required">Este campo no puede estar en blanco</span>
+          </mat-error>
+        <button mat-raised-button color="primary" type="submit">Registrar</button><br/>
+      </form>
+    </div>
+</div>

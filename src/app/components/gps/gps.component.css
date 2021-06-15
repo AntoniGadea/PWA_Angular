@@ -1,0 +1,36 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+}
+
+mat-card{
+    margin: 20px;
+    width: 80%;
+    height: auto;
+}
+
+mat-card-header{
+    font-size: 20px;
+}
+
+.bot{
+    position: sticky;
+    bottom: 40px;
+    left: 75%;
+}
+
+h2{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.delete{
+    position: relative;
+    left: 94%;
+    bottom:94%;
+}

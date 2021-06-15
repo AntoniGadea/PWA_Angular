@@ -1,0 +1,48 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.bot{
+  position: absolute;
+  bottom: 0 !important;
+}
+
+.btn-red{
+  color: white;
+  background-color: rgb(182, 30, 30);
+  border-radius: 3px;
+  margin: 20px;
+}
+
+.btn-red:hover{
+  background-color: rgb(206, 37, 37);
+}
+
+.titulo a{
+  text-decoration: none;
+  color: white;
+}
+
+mat-icon{
+  margin-right: 8px;
+}
+
+app-asistente{
+  position: sticky;
+  bottom: 91%;
+  left: 80%;
+  z-index: 3;
+}

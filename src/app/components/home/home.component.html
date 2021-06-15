@@ -1,0 +1,21 @@
+<div>
+<mat-card>
+    <mat-card-title>Fichar</mat-card-title>
+    <mat-card-content>
+        <button [routerLink]="['/fichar']" mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+            <mat-icon>share_location</mat-icon>
+          </button>  
+    </mat-card-content>
+    <mat-card-content> <i>Desde aqui podrá fichar cada vez que entre o salga del trabajo</i></mat-card-content>
+</mat-card>
+
+<mat-card>
+    <mat-card-title>Partes de horas</mat-card-title>
+    <mat-card-content>
+        <button mat-fab [routerLink]="['/parte']" color="warn" aria-label="Example icon button with a bookmark icon">
+            <mat-icon>upload_file</mat-icon>
+          </button>  
+    </mat-card-content>
+    <mat-card-content> <i>Importar datos de trabajo a partir de un CSV</i></mat-card-content>
+</mat-card>
+</div>

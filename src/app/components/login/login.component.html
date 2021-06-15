@@ -1,0 +1,27 @@
+<div class="example-container">
+    <div class="form-container">
+    <form [formGroup]="form" (submit)="onSubmit()">
+      <mat-label> Email: </mat-label>
+        <mat-form-field class="form-field ripple" appearance="outline">
+          <input matInput formControlName="email" required placeholder="Email">
+        </mat-form-field>
+        <mat-error class="error" *ngIf="form.controls.email.touched && form.controls.email.invalid">
+          <span *ngIf="form.controls.email.errors.required">Este campo es obligatorio.</span>
+          <span *ngIf="form.controls.email.errors.pattern">El usuario introducido no es valido.</span>
+        </mat-error>
+        <mat-label> Contraseña: </mat-label>
+        <mat-form-field class="form-field" appearance="outline">
+          <input matInput formControlName="password" type="password" placeholder="******">
+        </mat-form-field>
+        <mat-error class="error" *ngIf="form.controls.password.touched && form.controls.password.invalid">
+          <span>Este campo es obligatorio</span>
+        </mat-error>
+        <mat-error class="error" *ngIf="checkError()">
+          <span>El usuario o contraseña no son validos</span>
+        </mat-error>
+        <button mat-raised-button color="primary" type="submit">Log In</button><br/>
+        <button color="warn" mat-raised-button [routerLink]="['/registration']">Crear una cuenta</button>
+      </form>
+    </div>
+</div>
+
